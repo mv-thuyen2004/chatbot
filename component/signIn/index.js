@@ -6,7 +6,7 @@ import axios from 'axios';
 
 
 
-const Signup = () => {
+const Signin = ({navigation}) => {
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('')
   const log = () => {
@@ -18,7 +18,7 @@ const Signup = () => {
 
       axios({
         method: 'get',
-        url: 'http://192.168.1.6:8081/a/data',
+        url: 'http://192.168.1.8:8000/a/data',
         headers: { "Accept": "application/json, text/plain, /", "Content-Type": "multipart/form-data" },
         params: {
           var1: user,
@@ -45,11 +45,11 @@ const Signup = () => {
   return (
     <View style={styles.container}>
       <View style={styles.text} >
-        <Text style={styles.header} >Register</Text>
+        <Text style={styles.header} >Login</Text>
         <Text style={styles.header1}>Welcome back</Text>
       </View>
       <View style={styles.icon}>
-        
+        <Image source={require('../../image/icon.jpg')} style={{ width: 220, height: 270 }} />
       </View>
       <View style={styles.input}>
         <Text style={styles.textInput}  >Enter your mobile number</Text>
@@ -59,13 +59,6 @@ const Signup = () => {
           onChangeText={setUser}
           placeholder="0123456789">
         </TextInput>
-        <Text style={styles.textInput}  >Enter your email</Text>
-        <TextInput
-          style={styles.inputText}
-          value={user}
-          onChangeText={setUser}
-          placeholder="abc123@gmail.com">
-        </TextInput>
         <Text style={styles.textInput} >Enter your password</Text>
         <TextInput
           style={[styles.inputText]}
@@ -74,26 +67,23 @@ const Signup = () => {
           secureTextEntry={true}
           placeholder="********">
         </TextInput>
-        <Text style={styles.textInput} >Re-Enter your password</Text>
-        <TextInput
-          style={[styles.inputText]}
-          value={password}
-          onChangeText={setPassword}
-          secureTextEntry={true}
-          placeholder="********">
-        </TextInput>
-        
+        <TouchableOpacity>
+          <Text style={styles.forgot} >forgot password?</Text>
+        </TouchableOpacity>
         <TouchableOpacity
           onPress={log}
         >
           <View style={styles.login} >
-            <Text style={styles.textLogin}>Sign Up</Text>
+            <Text style={styles.textLogin}>Login</Text>
           </View>
         </TouchableOpacity>
         <View style={styles.signUp} >
           <Text style={styles.signUp1} >Don't have an account? </Text>
-          <TouchableOpacity>
-            <Text style={styles.signUp2}>Sign in</Text>
+          <TouchableOpacity 
+          onPress={()=>{
+            navigation.navigate('Signup')
+          }} >
+            <Text style={styles.signUp2}>Sign Up</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -101,5 +91,5 @@ const Signup = () => {
     </View>
   );
 }
-export default Signup
+export default Signin
 

@@ -1,15 +1,26 @@
 
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
-import Signup from './login/signUp';
-import Signin from './login/signIn';
+import Signup from './component/signUp';
+import Signin from './component/signIn';
+import Info from './component/profile/info'
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Signin/>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='Info' screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Signin" component={Signin}/>
+        <Stack.Screen name="Signup" component={Signup} />
+        <Stack.Screen name="Info" component={Info} />
+      </Stack.Navigator>
+    </NavigationContainer>
+    // <View style={styles.container}>
+    //   <Signin/>
 
-    </View>
+    // </View>
   );
 }
 
@@ -21,75 +32,75 @@ const styles = StyleSheet.create({
     //alignItems: 'center',
     //justifyContent: 'center',
   },
-  header:{
+  // header:{
 
-    fontSize:30,
-    fontWeight:'bold',
-    marginVertical:30
-  },
-  header1:{
+  //   fontSize:30,
+  //   fontWeight:'bold',
+  //   marginVertical:30
+  // },
+  // header1:{
     
-    fontSize:20
+  //   fontSize:20
 
-  },
-  text:{
-    flex:1,
-    //backgroundColor:'red',
-    alignItems:'center',
-    justifyContent:'center'
+  // },
+  // text:{
+  //   flex:1,
+  //   //backgroundColor:'red',
+  //   alignItems:'center',
+  //   justifyContent:'center'
 
-  },
-  icon:{
-    flex:3,
-    //backgroundColor:'white',
-    justifyContent:'center',
-    alignItems:'center'
-  },
-  input:{
-    flex:4,
-    //backgroundColor:'yellow'
-  },
-  textInput:{
-    marginLeft:20,
-    marginTop:10
+  // },
+  // icon:{
+  //   flex:3,
+  //   //backgroundColor:'white',
+  //   justifyContent:'center',
+  //   alignItems:'center'
+  // },
+  // input:{
+  //   flex:4,
+  //   //backgroundColor:'yellow'
+  // },
+  // textInput:{
+  //   marginLeft:20,
+  //   marginTop:10
 
-  },
-  inputText:{
-    height: 55,
-    borderWidth:1,
-    borderRadius:15,
-    marginHorizontal:20,
-    marginVertical:10,
-    padding:10
-  },
-  forgot:{
-    textAlign:'right',
-    margin :20
-  },
-  login:{
-    backgroundColor:'black',
-    padding:20,
-    justifyContent:'center',
-    alignItems:'center',
-    marginHorizontal:20,
-    borderRadius:15,
+  // },
+  // inputText:{
+  //   height: 55,
+  //   borderWidth:1,
+  //   borderRadius:15,
+  //   marginHorizontal:20,
+  //   marginVertical:10,
+  //   padding:10
+  // },
+  // forgot:{
+  //   textAlign:'right',
+  //   margin :20
+  // },
+  // login:{
+  //   backgroundColor:'black',
+  //   padding:20,
+  //   justifyContent:'center',
+  //   alignItems:'center',
+  //   marginHorizontal:20,
+  //   borderRadius:15,
 
-  },
-  textLogin:{
-    color:'white',
+  // },
+  // textLogin:{
+  //   color:'white',
     
-  },
-  signUp:{
-    flex:1,
-    flexDirection:'row',
-    justifyContent:'center',
-    alignItems:'center'
+  // },
+  // signUp:{
+  //   flex:1,
+  //   flexDirection:'row',
+  //   justifyContent:'center',
+  //   alignItems:'center'
 
-  },
-  signUp2:{
-    fontWeight:'bold'
+  // },
+  // signUp2:{
+  //   fontWeight:'bold'
 
-  }
+  // }
 
 
 
