@@ -17,7 +17,11 @@ const Info = ({navigation}) => {
 
                 <Text style={styles.name}>Mai Thuyen</Text>
                 <Text style={styles.gmail}>maivanthuyen07042004@gmail.com</Text>
-                <TouchableOpacity>
+                <TouchableOpacity
+                onPress={()=>{
+                   navigation.navigate('Change')
+                  }}
+                >
                   <View style={styles.edit}>
                     <Text style={styles.editProfile} >edit profile</Text>
                   </View>

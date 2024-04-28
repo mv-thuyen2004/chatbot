@@ -2,7 +2,8 @@
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
 import Signup from './component/signUp';
 import Signin from './component/signIn';
-import Info from './component/profile/info'
+import Info from './component/profile/info';
+import change from './component/profile/change';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
@@ -11,10 +12,11 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Info' screenOptions={{headerShown: false}}>
+      <Stack.Navigator initialRouteName='Change' screenOptions={{headerShown: false}}>
         <Stack.Screen name="Signin" component={Signin}/>
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Info" component={Info} />
+        <Stack.Screen name="change" component={Change}/>
       </Stack.Navigator>
     </NavigationContainer>
     // <View style={styles.container}>
