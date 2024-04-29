@@ -26,15 +26,19 @@ const styles = StyleSheet.create({
     home:{
         flex:3,
         //backgroundColor:'red',
+        
+
+        
+    },
+    iconH:{
         fontSize:26,
         paddingVertical:25,
         paddingHorizontal:30,
 
-        
     },
     titlChats:{
         //backgroundColor:'blue',
-        flex:7,
+        flex:5,
         paddingVertical:25,
         fontSize:26,
 

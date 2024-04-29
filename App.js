@@ -5,6 +5,8 @@ import Signin from './component/signIn';
 import Info from './component/profile/info';
 import Change from './component/profile/change';
 import Chats from './component/chats';
+
+import Home from './component/home';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
@@ -19,6 +21,8 @@ export default function App() {
         <Stack.Screen name="Info" component={Info} />
         <Stack.Screen name="Change" component={Change}/>
         <Stack.Screen name="Chats" component={Chats}/>
+        <Stack.Screen name="Home" component={Home}/>
+        
       </Stack.Navigator>
     </NavigationContainer>
     // <View style={styles.container}>

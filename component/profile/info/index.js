@@ -8,7 +8,11 @@ const Info = ({navigation}) => {
         <View style={styles.container}>
             <View style={styles.container1}>
               <View style={styles.tit}>
-                <Text style={styles.icon}>H</Text>
+                <TouchableOpacity onPress={()=>{
+            navigation.navigate('Home')
+                }}>
+                    <Text style={styles.icon}>H</Text>
+                </TouchableOpacity>
                 <Text style={styles.profile}>Profile</Text>
                 </View>
             </View>

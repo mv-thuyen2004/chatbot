@@ -8,7 +8,16 @@ const Chats = ({navigation}) => {
         <View style={styles.container}>
             <View style={styles.title}>
                 <View style={styles.title1}>
-                  <Text style={styles.home} >H</Text>
+                    <TouchableOpacity   
+                        style={styles.home}
+
+                        onPress={()=>{
+                        navigation.navigate('Home')
+                    }}>
+                    <Text style={styles.iconH}>H</Text>
+                    </TouchableOpacity>
+                
+                    
                   <Text style={styles.titlChats}>chats</Text> 
                 </View>
             </View>
