@@ -46,6 +46,28 @@ const Chats = ({navigation}) => {
                 
     
             </View>
+            <View style={styles.container3}>
+                <TouchableOpacity
+                onPress={()=>{
+                    navigation.navigate('Home')
+                  }}>
+                    <Text style={styles.Home}>home</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                onPress={()=>{
+                    navigation.navigate('Chats')
+                  }}>
+                    <Text style={styles.Chat}>Chat</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                onPress={()=>{
+                    navigation.navigate('Info')
+                  }}>
+                    <Text style={styles.Info}>info</Text>
+                </TouchableOpacity>
+                
+            </View>
+            
             
         </View>
         

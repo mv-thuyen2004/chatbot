@@ -6,9 +6,9 @@ import axios from 'axios';
 
 
 
-const Signin = ({navigation}) => {
+const Change = ({navigation}) => {
   const [name, setName] = useState('');
-  const [date, setDate] = useState('');
+
   const [gmail, setGmail] = useState('');
   const [phone, setPhone] = useState('')
   const log = () => {
@@ -60,24 +60,23 @@ const Signin = ({navigation}) => {
         </ImageBackground>
       </View>
       <View style={styles.input}>
+        <Text style={styles.label} >Tên người dùng</Text>
         <TextInput
           style={styles.inputText}
           value={name}
           onChangeText={setName}
           placeholder="Albert Flores">
         </TextInput>
-        <TextInput
-          style={styles.inputText}
-          value={date}
-          onChangeText={setDate}
-          placeholder="01/01/1988">
-        </TextInput>
+
+        <Text style={styles.label} >Gmail</Text>
         <TextInput
           style={styles.inputText}
           value={gmail}
           onChangeText={setGmail}
           placeholder="maivanthuyen07042004@gmail.com">
         </TextInput>
+
+        <Text style={styles.label} >Số điện thoại</Text>
         <TextInput
           style={[styles.inputText]}
           value={phone}
@@ -103,5 +102,5 @@ const Signin = ({navigation}) => {
     </View>
   );
 }
-export default Signin
+export default Change
 

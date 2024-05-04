@@ -52,12 +52,14 @@ const styles = StyleSheet.create({
   
     },
     inputText:{
-      height: 55,
+      height: 48,
       borderWidth:1,
-      borderRadius:15,
+      borderRadius:5,
       marginHorizontal:20,
       marginVertical:10,
-      padding:10
+      padding:10,
+      borderWidth:1,
+      borderColor:'lightgrey'
     },
     
     update:{
@@ -75,6 +77,10 @@ const styles = StyleSheet.create({
     change:{
         marginVertical:25
         
+    },
+    label:{
+      marginHorizontal:20,
+      fontWeight:'bold'
     }
   });
 export default styles;

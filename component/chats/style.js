@@ -5,6 +5,13 @@ const styles = StyleSheet.create({
         flex:1,
         backgroundColor:'white'
     },
+    container3: {
+        flex: 1,
+        //backgroundColor: 'yellow',
+        flexDirection: 'row',
+        justifyContent: "space-around",
+        alignItems: 'center'
+    },
     title:{
         flex:1,
         backgroundColor:'lightgrey',
@@ -18,9 +25,6 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         
         
-
-
-
         
     },
     home:{
@@ -32,14 +36,14 @@ const styles = StyleSheet.create({
     },
     iconH:{
         fontSize:26,
-        paddingVertical:25,
+        paddingVertical:20,
         paddingHorizontal:30,
 
     },
     titlChats:{
         //backgroundColor:'blue',
         flex:5,
-        paddingVertical:25,
+        paddingVertical:20,
         fontSize:26,
 
 

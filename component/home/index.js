@@ -20,8 +20,9 @@ const Home = ({navigation}) => {
                       <View style={styles.botColumn}>
                         <View style={styles.botRow}>
                             <View style={styles.bot}>
-                                <Image source={require('../../image/logo1.png')} style={styles.image}></Image>
-                                
+                                <View style={styles.image}>
+                                <Image source={require('../../image/logo1.png')} style={{ width: 50, height: 50 }}></Image>
+                                </View>
                                 <View style={styles.infoBot}>
                                     <Text style={styles.nameBot} >PDF</Text>
                                     <Text style={styles.introduce}>con bot nay se tra loi thong tin ban gui vao pdf</Text>
@@ -29,8 +30,9 @@ const Home = ({navigation}) => {
                               
                             </View>
                             <View style={styles.bot}>
-                                <Image source={require('../../image/logo1.png')} style={styles.image}></Image>
-                                
+                                <View style={styles.image}>
+                                <Image source={require('../../image/logo1.png')} style={{ width: 50, height: 50 }}></Image>
+                                </View>
                                 <View style={styles.infoBot}>
                                     <Text style={styles.nameBot} >PDF</Text>
                                     <Text style={styles.introduce}>con bot nay se tra loi thong tin ban gui vao pdf</Text>
@@ -41,8 +43,9 @@ const Home = ({navigation}) => {
                         </View>
                         <View style={styles.botRow}>
                             <View style={styles.bot}>
-                                <Image source={require('../../image/logo1.png')} style={styles.image}></Image>
-                                
+                                <View style={styles.image}>
+                                <Image source={require('../../image/logo1.png')} style={{ width: 50, height: 50 }}></Image>
+                                </View>
                                 <View style={styles.infoBot}>
                                     <Text style={styles.nameBot} >PDF</Text>
                                     <Text style={styles.introduce}>con bot nay se tra loi thong tin ban gui vao pdf</Text>
@@ -50,8 +53,9 @@ const Home = ({navigation}) => {
                               
                             </View>
                             <View style={styles.bot}>
-                                <Image source={require('../../image/logo1.png')} style={styles.image}></Image>
-                                
+                                <View style={styles.image}>
+                                <Image source={require('../../image/logo1.png')} style={{ width: 50, height: 50 }}></Image>
+                                </View>
                                 <View style={styles.infoBot}>
                                     <Text style={styles.nameBot} >PDF</Text>
                                     <Text style={styles.introduce}>con bot nay se tra loi thong tin ban gui vao pdf</Text>
@@ -62,8 +66,9 @@ const Home = ({navigation}) => {
                         </View>
                         <View style={styles.botRow}>
                             <View style={styles.bot}>
-                                <Image source={require('../../image/logo1.png')} style={styles.image}></Image>
-                                
+                                <View style={styles.image}>
+                                <Image source={require('../../image/logo1.png')} style={{ width: 50, height: 50 }}></Image>
+                                </View>
                                 <View style={styles.infoBot}>
                                     <Text style={styles.nameBot} >PDF</Text>
                                     <Text style={styles.introduce}>con bot nay se tra loi thong tin ban gui vao pdf</Text>
@@ -71,8 +76,9 @@ const Home = ({navigation}) => {
                               
                             </View>
                             <View style={styles.bot}>
-                                <Image source={require('../../image/logo1.png')} style={styles.image}></Image>
-                                
+                                <View style={styles.image}>
+                                <Image source={require('../../image/logo1.png')} style={{ width: 50, height: 50 }}></Image>
+                                </View>
                                 <View style={styles.infoBot}>
                                     <Text style={styles.nameBot} >PDF</Text>
                                     <Text style={styles.introduce}>con bot nay se tra loi thong tin ban gui vao pdf</Text>
@@ -83,8 +89,9 @@ const Home = ({navigation}) => {
                         </View>
                         <View style={styles.botRow}>
                             <View style={styles.bot}>
-                                <Image source={require('../../image/logo1.png')} style={styles.image}></Image>
-                                
+                                <View style={styles.image}>
+                                <Image source={require('../../image/logo1.png')} style={{ width: 50, height: 50 }}></Image>
+                                </View>
                                 <View style={styles.infoBot}>
                                     <Text style={styles.nameBot} >PDF</Text>
                                     <Text style={styles.introduce}>con bot nay se tra loi thong tin ban gui vao pdf</Text>
@@ -92,8 +99,9 @@ const Home = ({navigation}) => {
                               
                             </View>
                             <View style={styles.bot}>
-                                <Image source={require('../../image/logo1.png')} style={styles.image}></Image>
-                                
+                                <View style={styles.image}>
+                                <Image source={require('../../image/logo1.png')} style={{ width: 50, height: 50 }}></Image>
+                                </View>
                                 <View style={styles.infoBot}>
                                     <Text style={styles.nameBot} >PDF</Text>
                                     <Text style={styles.introduce}>con bot nay se tra loi thong tin ban gui vao pdf</Text>
@@ -102,27 +110,7 @@ const Home = ({navigation}) => {
                             </View>
                             
                         </View>
-                        <View style={styles.botRow}>
-                            <View style={styles.bot}>
-                                <Image source={require('../../image/logo1.png')} style={styles.image}></Image>
-                                
-                                <View style={styles.infoBot}>
-                                    <Text style={styles.nameBot} >PDF</Text>
-                                    <Text style={styles.introduce}>con bot nay se tra loi thong tin ban gui vao pdf</Text>
-                                </View>
-                              
-                            </View>
-                            <View style={styles.bot}>
-                                <Image source={require('../../image/logo1.png')} style={styles.image}></Image>
-                                
-                                <View style={styles.infoBot}>
-                                    <Text style={styles.nameBot} >PDF</Text>
-                                    <Text style={styles.introduce}>con bot nay se tra loi thong tin ban gui vao pdf</Text>
-                                </View>
-                              
-                            </View>
-                            
-                        </View>
+                       
                       </View>
                     </ScrollView>
 

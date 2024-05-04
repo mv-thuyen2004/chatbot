@@ -9,28 +9,49 @@ const styles = StyleSheet.create({
         //justifyContent: 'center',
       },
     container1:{
-      flex:1,
+      paddingTop:10,
+      flex:2,
       //backgroundColor:'yellow',
        justifyContent:'center',
       // alignItems:'center',
       
     },
     container2:{
-      flex :2,
+      flex :3,
       //backgroundColor:'pink',
       justifyContent:'center',
-      alignItems:'center',
+      //alignItems:'center',
+      flexDirection:'row'
     },
     container3:{
-      flex:3,
-      paddingTop:70,
+      flex:9,
+      paddingTop:20,
       //backgroundColor:'blue',
       //justifyContent:'center',
       //alignItems:'center',
     },
     container4:{
-      flex:2,
+      flex:3,
       //backgroundColor:'green',
+      
+    },
+    container5:{
+      flex:1,
+      //backgroundColor:'pink',
+      flexDirection:'row',
+      justifyContent:'space-around',
+      paddingVertical:5,
+      
+      
+      
+
+
+      
+
+    },
+    navi:{
+      flex:1,
+
       
     },
     tit:{
@@ -44,40 +65,40 @@ const styles = StyleSheet.create({
       fontWeight:'bold'
 
     },
-    gmail:{
-      padding:9,
-      fontSize:12,
+    info:{
+      
+      paddingHorizontal:5
     
     },
-    edit:{
-      //backgroundColor:'blue',
-      borderColor:'lightgrey',
-      borderWidth:1,
-      borderRadius:5
+    info1:{
+      fontSize:13,
+      paddingVertical:3,
+      fontWeight:'500'
+
     },
-    editProfile:{
-      paddingHorizontal:50,
-      paddingVertical:2,
-      
-    },
+    
     name:{
       fontWeight:'bold',
-      fontSize:16,
+      fontSize:20,
 
     },
+    container31:{
 
-    info:{
-      borderColor:'lightgrey',
-      borderWidth:1,
-      borderRadius:8,
-      marginHorizontal:30,
-      marginBottom:20
-    },
-    textInfo:{
-      padding:15
-
+      flexDirection:'row',
+      //backgroundColor:'red',
+      paddingHorizontal:50,
+      justifyContent:'space-between',
+      paddingTop:20
 
     },
+    container3Text:{
+      fontSize:15,
+      fontWeight:"600",
+      
+    },
+
+    
+
     
 
 

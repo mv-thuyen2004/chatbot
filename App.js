@@ -5,23 +5,28 @@ import Signin from './component/signIn';
 import Info from './component/profile/info';
 import Change from './component/profile/change';
 import Chats from './component/chats';
-
+import Introduce from './component/introduce';
 import Home from './component/home';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Feedback from './component/feedback';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Chats' screenOptions={{headerShown: false}}>
+      <Stack.Navigator initialRouteName='Home' screenOptions={{headerShown: false}}>
         <Stack.Screen name="Signin" component={Signin}/>
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Info" component={Info} />
         <Stack.Screen name="Change" component={Change}/>
         <Stack.Screen name="Chats" component={Chats}/>
         <Stack.Screen name="Home" component={Home}/>
+        <Stack.Screen name="Introduce" component={Introduce}/>
+        <Stack.Screen name="Feedback" component={Feedback}/>
+
+
         
       </Stack.Navigator>
     </NavigationContainer>

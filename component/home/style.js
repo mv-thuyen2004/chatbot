@@ -3,6 +3,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor:'#FFFFFF'
     },
     container1: {
         flex: 2,
@@ -13,7 +14,7 @@ const styles = StyleSheet.create({
 
     },
     container2: {
-        flex: 15,
+        flex: 12,
     },
     container3: {
         flex: 1,
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
     bot:{
         height:160,
         width:130,
-        backgroundColor:'white',
+        backgroundColor:'#f6f6f6',
         borderRadius:20
         
         
@@ -71,30 +72,26 @@ const styles = StyleSheet.create({
     },
     image:{
 
-        flex:7,
-        // backgroundColor:'yellow',
-        // borderBottomRightRadius:40,
-        // borderTopLeftRadius:20,
-        // borderTopRightRadius:20,
-        width:130,
+        flex:2,
+        padding:10,
+        
 
 
     },
     infoBot:{
-        flex:3,
+        flex:4,
 
-        backgroundColor:'white',
-        marginTop:-20,
+        backgroundColor:'#f6f6f6',
         borderTopLeftRadius:20,
     },
     nameBot:{
         fontWeight:'bold',
         paddingTop:5,
-        paddingHorizontal:5
+        paddingHorizontal:10
     },
     introduce:{
-        fontSize:10,
-        paddingHorizontal:5,
+        fontSize:13,
+        paddingHorizontal:10,
     }
 
 

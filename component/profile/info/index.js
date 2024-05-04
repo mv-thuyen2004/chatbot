@@ -13,37 +13,59 @@ const Info = ({navigation}) => {
                 }}>
                     <Text style={styles.icon}>H</Text>
                 </TouchableOpacity>
-                <Text style={styles.profile}>Profile</Text>
+                <Text style={styles.profile}>Account</Text>
                 </View>
             </View>
             <View style={styles.container2}>
-            <Image source={require('../../../image/icon.jpg')} style={{ width: 96, height: 96, borderRadius:50 }} />
-
-                <Text style={styles.name}>Mai Thuyen</Text>
-                <Text style={styles.gmail}>maivanthuyen07042004@gmail.com</Text>
-                <TouchableOpacity
-                onPress={()=>{
-                   navigation.navigate('Change')
-                  }}
-                >
-                  <View style={styles.edit}>
-                    <Text style={styles.editProfile} >edit profile</Text>
-                  </View>
-                </TouchableOpacity>
+             
+                <Image source={require('../../../image/icon.jpg')} style={{ width: 96, height: 96, borderRadius:50 }} />
+                <View style={styles.info}>
+                  <Text style={styles.name}>Mai Thuyen</Text>
+                  <Text style={styles.info1}>maivanthuyen07042004@gmail.com</Text>
+                  <Text style={styles.info1}>0917457884</Text>
+                </View>
+                
 
             </View>
             <View style={styles.container3}>
-              <View style={styles.info}>
-                <Text style={styles.textInfo}>0123456789</Text>
-              </View>
-              <View style={styles.info}>
-                <Text style={styles.textInfo}>maivanthuyen07042004@gmail.com</Text>
-              </View>
-              <View style={styles.info}>
-                <Text style={styles.textInfo}>01/01/19988
 
-                </Text>
+              <TouchableOpacity onPress={()=>{
+            navigation.navigate('Change')
+                }}>
+              <View style={styles.container31}>
+                <Text  style={styles.container3Text}>Edit Profile</Text>
+                <Text>T</Text>
               </View>
+              </TouchableOpacity>
+
+              <TouchableOpacity onPress={()=>{
+            navigation.navigate('Home')
+                }}>
+              <View style={styles.container31}>
+                <Text  style={styles.container3Text}>Help Center</Text>
+                <Text>T</Text>
+              </View>
+              </TouchableOpacity>
+
+              <TouchableOpacity onPress={()=>{
+            navigation.navigate('Introduce')
+                }}>
+              <View style={styles.container31}>
+                <Text  style={styles.container3Text}>About Docu AI</Text>
+                <Text>T</Text>
+              </View>
+              </TouchableOpacity>
+
+              <TouchableOpacity onPress={()=>{
+            navigation.navigate('Feedback')
+                }}>
+              <View style={styles.container31}>
+                <Text  style={styles.container3Text}>Feedback</Text>
+                <Text>T</Text>
+              </View>
+              </TouchableOpacity>
+
+              
             </View>
             <View style={styles.container4}>
             
@@ -60,6 +82,27 @@ const Info = ({navigation}) => {
             
             </TouchableOpacity>
             
+            </View>
+            <View style={styles.container5}>
+            <TouchableOpacity
+                onPress={()=>{
+                    navigation.navigate('Home')
+                  }}>
+                    <Text style={styles.navi}>home</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                onPress={()=>{
+                    navigation.navigate('Chats')
+                  }}>
+                    <Text style={styles.navi}>Chat</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                onPress={()=>{
+                    navigation.navigate('Info')
+                  }}>
+                    <Text style={styles.navi}>info</Text>
+                </TouchableOpacity>
+
             </View>
         </View>
     )

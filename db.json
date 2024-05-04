@@ -1,0 +1,30 @@
+{  "CL1":{ 
+    "sdt":"0917457884",
+    "pw":"123456",
+    "name":"mai van thuyen",
+    "gmail":"maivanthuyen07042004@gmail.com",
+    "avt":"file avt",
+    "chats":[
+        {
+            "icon":"file icon",
+            "nameChat":"name chat"
+        },
+        {
+            "icon":"file icon",
+            "nameChat":"name chat"
+        },
+        {
+            "icon":"file icon",
+            "nameChat":"name chat"
+        }
+
+
+    ],
+    "chat":["objectID('A')","objectID('B')","objectID('C')"]
+},
+"CL2":{
+    "doc":[]
+}
+
+
+}
