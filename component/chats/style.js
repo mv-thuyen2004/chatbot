@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     title:{
-        flex:1,
+        flex:2,
         backgroundColor:'lightgrey',
         
         
@@ -22,51 +22,66 @@ const styles = StyleSheet.create({
     },
     title1:{
         flex:1,
-        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center'
         
         
         
     },
-    home:{
-        flex:3,
-        //backgroundColor:'red',
-        
-
-        
-    },
-    iconH:{
-        fontSize:26,
-        paddingVertical:20,
-        paddingHorizontal:30,
-
-    },
+    
     titlChats:{
         //backgroundColor:'blue',
         flex:5,
-        paddingVertical:20,
-        fontSize:26,
+        paddingVertical:15,
+        fontSize:30,
+
 
 
     },
 
     chats:{
-        flex:9,
+        flex:18,
         
-        //backgroundColor:'blue'
+        
     },
     chats1:{
         padding:15,
+       
     },
     chats2:{
         flex:1,
         flexDirection:'row',
-        paddingVertical:10
+        paddingVertical:10,
+        
+        marginBottom:10,
+        justifyContent:'center',
+        alignItems:'center'
 
     },
     namechat:{
         
-        paddingVertical:15,
-        paddingHorizontal:2
+        
+        paddingHorizontal:6,
+        fontSize:20,
+        fontWeight:'500'
+        
+        
+    },
+    Image:{
+        flex:1,
+       
+
+    },
+    inf:{
+        flex:8,
+        
+
+    },
+    welcom:{
+        
+        paddingHorizontal:6,
+        
+
     }
 
 

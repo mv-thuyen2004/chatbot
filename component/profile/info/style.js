@@ -11,14 +11,14 @@ const styles = StyleSheet.create({
     container1:{
       paddingTop:10,
       flex:2,
-      //backgroundColor:'yellow',
+      // backgroundColor:'yellow',
        justifyContent:'center',
-      // alignItems:'center',
+       alignItems:'center',
       
     },
     container2:{
       flex :3,
-      //backgroundColor:'pink',
+     // backgroundColor:'pink',
       justifyContent:'center',
       //alignItems:'center',
       flexDirection:'row'
@@ -54,19 +54,24 @@ const styles = StyleSheet.create({
 
       
     },
-    tit:{
-      flexDirection:'row',
-      paddingHorizontal:30,
-    },
-    icon:{},
+    
+  
     profile:{
-      marginLeft:110,
-      fontSize:25,
+      
+      fontSize:30,
       fontWeight:'bold'
 
     },
+    avt:{
+      marginLeft:40,
+
+      flex:3,
+       width: 96, 
+       height: 96, 
+       borderRadius:96 ,
+    },
     info:{
-      
+      flex:6,
       paddingHorizontal:5
     
     },

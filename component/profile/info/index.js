@@ -1,28 +1,52 @@
-import { useState } from 'react';
+import { useState ,useEffect} from 'react';
 import { Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
 import styles from './style';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
+import config from '../../../config';
+
 
 const Info = ({navigation}) => {
+  const [name , setName] = useState();
+  const [gmail, setGmail] = useState();
+  const [phone, setPhone] = useState();
+  const [avatar, setAvatar] = useState();
+
+  useEffect(()=>{
+    AsyncStorage.getItem("name").then(result =>{
+      setName(result)
+    })
+    AsyncStorage.getItem("gmail").then(result =>{
+      setGmail(result)
+    })
+    AsyncStorage.getItem("phone").then(result =>{
+      setPhone(result)
+    })
+    AsyncStorage.getItem("avatar").then(result =>{
+      setAvatar(result)
+    })
+    
+  },[])
+
+  
 
     return(
         <View style={styles.container}>
             <View style={styles.container1}>
-              <View style={styles.tit}>
-                <TouchableOpacity onPress={()=>{
-            navigation.navigate('Home')
-                }}>
-                    <Text style={styles.icon}>H</Text>
-                </TouchableOpacity>
                 <Text style={styles.profile}>Account</Text>
-                </View>
             </View>
             <View style={styles.container2}>
              
-                <Image source={require('../../../image/icon.jpg')} style={{ width: 96, height: 96, borderRadius:50 }} />
+                {/* <Image source={require('../../../image/icon.jpg')} style={styles.avt} /> */}
+                {/* <Image source={config.ip+avatar} style={styles.avt} /> */}
+                <Image source={{uri: config.ip+"/" + avatar}} style={styles.avt} />
+                {/* <Image source={{uri:  'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'}} style={styles.avt} /> */}
+
                 <View style={styles.info}>
-                  <Text style={styles.name}>Mai Thuyen</Text>
-                  <Text style={styles.info1}>maivanthuyen07042004@gmail.com</Text>
-                  <Text style={styles.info1}>0917457884</Text>
+                  <Text style={styles.name}>{name}</Text>
+                  <Text style={styles.info1}>{gmail}</Text>
+                  <Text style={styles.info1}>{phone}</Text>
                 </View>
                 
 
@@ -57,7 +81,9 @@ const Info = ({navigation}) => {
               </TouchableOpacity>
 
               <TouchableOpacity onPress={()=>{
+                
             navigation.navigate('Feedback')
+            
                 }}>
               <View style={styles.container31}>
                 <Text  style={styles.container3Text}>Feedback</Text>
@@ -73,7 +99,8 @@ const Info = ({navigation}) => {
             style={styles.logout}
             
             onPress={()=>{
-            // navigation.navigate('Signup')
+              AsyncStorage.clear()
+             navigation.navigate('Signin')
             }} >
             
 
@@ -84,25 +111,28 @@ const Info = ({navigation}) => {
             
             </View>
             <View style={styles.container5}>
-            <TouchableOpacity
+                <TouchableOpacity
                 onPress={()=>{
                     navigation.navigate('Home')
                   }}>
-                    <Text style={styles.navi}>home</Text>
+                   
+                    <Icon name="home" size={30} color="#A9A9A9" />
+
                 </TouchableOpacity>
                 <TouchableOpacity
                 onPress={()=>{
                     navigation.navigate('Chats')
                   }}>
-                    <Text style={styles.navi}>Chat</Text>
+                    
+                    <Icon name="wechat" size={30} color="#A9A9A9" />
                 </TouchableOpacity>
                 <TouchableOpacity
                 onPress={()=>{
                     navigation.navigate('Info')
                   }}>
-                    <Text style={styles.navi}>info</Text>
+                    <Icon name="user" size={30} color="#111111" />
                 </TouchableOpacity>
-
+                
             </View>
         </View>
     )

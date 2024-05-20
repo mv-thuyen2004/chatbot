@@ -1,9 +1,11 @@
-
+import React, { useState } from 'react';
 import { Text, View, Image, TextInput, TouchableOpacity ,ScrollView} from 'react-native';
 import styles from './style';
-
+import Icon from 'react-native-vector-icons/FontAwesome';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Home = ({navigation}) => {
+    
     return(
         <View style={styles.container}>
             <View style={styles.container1}>
@@ -19,97 +21,62 @@ const Home = ({navigation}) => {
                     <ScrollView style={styles.bots1}>
                       <View style={styles.botColumn}>
                         <View style={styles.botRow}>
-                            <View style={styles.bot}>
+                            <TouchableOpacity style={styles.bot}
+                            onPress={()=>{
+                                AsyncStorage.setItem('idBot', '1')
+                                navigation.navigate('UpLoadFile')
+
+                            }}
+                            >
                                 <View style={styles.image}>
-                                <Image source={require('../../image/logo1.png')} style={{ width: 50, height: 50 }}></Image>
+                                <Image source={require('../../image/botdocx.jpg')} style={{ width: 60, height: 60, borderRadius:15 }}></Image>
+                                </View>
+                                <View style={styles.infoBot}>
+                                    <Text style={styles.nameBot} >DOCX</Text>
+                                    <Text style={styles.introduce}>con bot này sẽ trả lời mọi thông tin từ file docx của bạn</Text>
+                                </View>
+                              
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.bot}
+                            onPress={()=>{
+                                AsyncStorage.setItem('idBot', '2')
+                                navigation.navigate('UpLoadFile');
+
+                            }}>
+                                <View style={styles.image}>
+                                <Image source={require('../../image/botpdf.jpg')} style={{ width: 60, height: 60, borderRadius:15}}></Image>
                                 </View>
                                 <View style={styles.infoBot}>
                                     <Text style={styles.nameBot} >PDF</Text>
-                                    <Text style={styles.introduce}>con bot nay se tra loi thong tin ban gui vao pdf</Text>
+                                    <Text style={styles.introduce}>con bot này sẽ trả lời mọi thông tin từ file pdf của bạn</Text>
                                 </View>
                               
-                            </View>
-                            <View style={styles.bot}>
-                                <View style={styles.image}>
-                                <Image source={require('../../image/logo1.png')} style={{ width: 50, height: 50 }}></Image>
-                                </View>
-                                <View style={styles.infoBot}>
-                                    <Text style={styles.nameBot} >PDF</Text>
-                                    <Text style={styles.introduce}>con bot nay se tra loi thong tin ban gui vao pdf</Text>
-                                </View>
-                              
-                            </View>
+                            </TouchableOpacity>
                             
                         </View>
                         <View style={styles.botRow}>
-                            <View style={styles.bot}>
+                            <TouchableOpacity style={styles.bot}
+                            onPress={()=>{
+                                AsyncStorage.setItem('idBot', '3')
+                                navigation.navigate('UpLoadFile')
+
+                            }}>
                                 <View style={styles.image}>
-                                <Image source={require('../../image/logo1.png')} style={{ width: 50, height: 50 }}></Image>
+                                <Image source={require('../../image/botTxt.jpg')} style={{ width: 60, height: 60, borderRadius:15}}></Image>
                                 </View>
                                 <View style={styles.infoBot}>
-                                    <Text style={styles.nameBot} >PDF</Text>
-                                    <Text style={styles.introduce}>con bot nay se tra loi thong tin ban gui vao pdf</Text>
+                                    <Text style={styles.nameBot} >TXT</Text>
+                                    <Text style={styles.introduce}>con bot này sẽ trả lời mọi thông tin từ file txt của bạn</Text>
                                 </View>
                               
-                            </View>
-                            <View style={styles.bot}>
-                                <View style={styles.image}>
-                                <Image source={require('../../image/logo1.png')} style={{ width: 50, height: 50 }}></Image>
-                                </View>
-                                <View style={styles.infoBot}>
-                                    <Text style={styles.nameBot} >PDF</Text>
-                                    <Text style={styles.introduce}>con bot nay se tra loi thong tin ban gui vao pdf</Text>
-                                </View>
-                              
-                            </View>
+                            </TouchableOpacity>
+                            
                             
                         </View>
-                        <View style={styles.botRow}>
-                            <View style={styles.bot}>
-                                <View style={styles.image}>
-                                <Image source={require('../../image/logo1.png')} style={{ width: 50, height: 50 }}></Image>
-                                </View>
-                                <View style={styles.infoBot}>
-                                    <Text style={styles.nameBot} >PDF</Text>
-                                    <Text style={styles.introduce}>con bot nay se tra loi thong tin ban gui vao pdf</Text>
-                                </View>
-                              
-                            </View>
-                            <View style={styles.bot}>
-                                <View style={styles.image}>
-                                <Image source={require('../../image/logo1.png')} style={{ width: 50, height: 50 }}></Image>
-                                </View>
-                                <View style={styles.infoBot}>
-                                    <Text style={styles.nameBot} >PDF</Text>
-                                    <Text style={styles.introduce}>con bot nay se tra loi thong tin ban gui vao pdf</Text>
-                                </View>
-                              
-                            </View>
+                        
+                        
                             
-                        </View>
-                        <View style={styles.botRow}>
-                            <View style={styles.bot}>
-                                <View style={styles.image}>
-                                <Image source={require('../../image/logo1.png')} style={{ width: 50, height: 50 }}></Image>
-                                </View>
-                                <View style={styles.infoBot}>
-                                    <Text style={styles.nameBot} >PDF</Text>
-                                    <Text style={styles.introduce}>con bot nay se tra loi thong tin ban gui vao pdf</Text>
-                                </View>
-                              
-                            </View>
-                            <View style={styles.bot}>
-                                <View style={styles.image}>
-                                <Image source={require('../../image/logo1.png')} style={{ width: 50, height: 50 }}></Image>
-                                </View>
-                                <View style={styles.infoBot}>
-                                    <Text style={styles.nameBot} >PDF</Text>
-                                    <Text style={styles.introduce}>con bot nay se tra loi thong tin ban gui vao pdf</Text>
-                                </View>
-                              
-                            </View>
-                            
-                        </View>
+                        
                        
                       </View>
                     </ScrollView>
@@ -121,19 +88,22 @@ const Home = ({navigation}) => {
                 onPress={()=>{
                     navigation.navigate('Home')
                   }}>
-                    <Text style={styles.home}>home</Text>
+                   
+                    <Icon name="home" size={30} color="#111111" />
+
                 </TouchableOpacity>
                 <TouchableOpacity
                 onPress={()=>{
                     navigation.navigate('Chats')
                   }}>
-                    <Text style={styles.chat}>Chat</Text>
+                    
+                    <Icon name="wechat" size={30} color="#A9A9A9" />
                 </TouchableOpacity>
                 <TouchableOpacity
                 onPress={()=>{
                     navigation.navigate('Info')
                   }}>
-                    <Text style={styles.info}>info</Text>
+                    <Icon name="user" size={30} color="#A9A9A9" />
                 </TouchableOpacity>
                 
             </View>

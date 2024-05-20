@@ -11,10 +11,13 @@ const styles = StyleSheet.create({
       //justifyContent: 'center',
     },
     header:{
+      paddingHorizontal:10
   
-      fontSize:30,
-      fontWeight:'bold',
-      marginVertical:30
+      
+      
+      
+    
+      
     },
     header1:{
       
@@ -31,20 +34,26 @@ const styles = StyleSheet.create({
     },
     icon:{
       flex:1,
-      //backgroundColor:'white',
+      // backgroundColor:'red',
       justifyContent:'center',
       alignItems:'center'
     },
     iconE:{
-        position: 'absolute',
-        bottom: 20,
-        right: 30,
+        position:'absolute',
+        bottom: 0,
+        right: 75,
         color:'blue'
     },
     input:{
       flex:4,
       marginTop:50
       //backgroundColor:'yellow'
+    },
+    avatar:{
+      width:128,
+      height:128,
+      borderRadius: 128
+
     },
     textInput:{
       marginLeft:20,

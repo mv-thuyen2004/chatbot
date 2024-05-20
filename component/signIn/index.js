@@ -2,11 +2,13 @@ import { useState } from 'react';
 import { Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
 import styles from './style';
 import axios from 'axios';
+import config from '../../config';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 
+const Signin = ({ navigation }) => {
 
-const Signin = ({navigation}) => {
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('')
   const log = () => {
@@ -15,28 +17,79 @@ const Signin = ({navigation}) => {
     }
     else {
 
+      const data = {
+        username: user,
+        password: password
+      };
+      
+      axios.post(config.ip+'/api/login', data)
+  .then(response => {
+    // console.log(response.data);
+    const { success}= response.data;
+    if(success){
+      const { fullname , email , phone, path_avatar, username, access_token }= response.data;
+      if(fullname == null){
+        AsyncStorage.setItem('name', username)
 
-      axios({
-        method: 'get',
-        url: 'http://192.168.1.8:8000/a/data',
-        headers: { "Accept": "application/json, text/plain, /", "Content-Type": "multipart/form-data" },
-        params: {
-          var1: user,
-          var2: password
-        }
+      }else{
+      AsyncStorage.setItem('name', fullname)
+      }
+      AsyncStorage.setItem('gmail', email)
+      AsyncStorage.setItem('phone', phone)
+      AsyncStorage.setItem('avatar', path_avatar)
+      AsyncStorage.setItem('access_token', access_token)
+      
+      
+
+      setUser('')
+      setPassword('')
+
+      navigation.navigate('Home')
+    }
+    else{
+    console.log('sai')
+    }
+
+    })
+  .catch(error => {
+    //console.log('tài khoản hoặc mật khẩu không đúng')
+    //console.error('Lỗi đăng nhập:', error);
+    alert("tài khoản hoặc mật khẩu không chính xác")
+    
+    
+  });
+      // axios({
+      //   method: 'post',
+      //   url: 'http://192.168.1.7:5055/api/login',
+      //   headers: { "Accept": "application/json, text/plain, /", "Content-Type": "multipart/form-data" },
+      //   params: {
+          
+      //     "username": user,
+
+      //     "password": password,
+          
+      //   }
 
 
-      })
-        .then(response => {
-          // Xử lý dữ liệu nhận được từ backend ở đây
-          console.log(response.data);
-          alert(JSON.stringify(response.data))
+      // })
+      //   .then(response => {
+      //     // Xử lý dữ liệu nhận được từ backend ở đây
+      //     // const { variable1, variable2 }= response.data
+      //     // alert(variable1+variable2)
 
-        })
-        .catch(error => {
-          // Xử lý lỗi nếu có
-          console.error('Error fetching data:', error);
-        });
+      //     console.log(response.data);
+      //     //alert(JSON.stringify(response.data))
+      //     // if(response.data=="hello world"){
+      //     //   navigation.navigate('Home')
+
+
+      //     // }
+
+      //   })
+      //   .catch(error => {
+      //     // Xử lý lỗi nếu có
+      //     console.error('Error fetching data:', error);
+      //   });
       //alert(user+password)
     }
 
@@ -78,11 +131,12 @@ const Signin = ({navigation}) => {
           </View>
         </TouchableOpacity>
         <View style={styles.signUp} >
-          <Text style={styles.signUp1} >Don't have an account? </Text>
-          <TouchableOpacity 
-          onPress={()=>{
-            navigation.navigate('Signup')
-          }} >
+          <Text  >Don't have an account? </Text>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('Signup')
+            }}
+             >
             <Text style={styles.signUp2}>Sign Up</Text>
           </TouchableOpacity>
         </View>

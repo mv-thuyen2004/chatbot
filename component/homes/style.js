@@ -62,8 +62,8 @@ const styles = StyleSheet.create({
         
     },
     bot:{
-        height:180,
-        width:140,
+        height:160,
+        width:130,
         backgroundColor:'#f6f6f6',
         borderRadius:20
         
@@ -72,17 +72,17 @@ const styles = StyleSheet.create({
     },
     image:{
 
-        flex:3,
+        flex:2,
         padding:10,
         
 
 
     },
     infoBot:{
-        flex:6,
+        flex:4,
 
         backgroundColor:'#f6f6f6',
-        borderRadius:20,
+        borderTopLeftRadius:20,
     },
     nameBot:{
         fontWeight:'bold',
@@ -92,7 +92,6 @@ const styles = StyleSheet.create({
     introduce:{
         fontSize:13,
         paddingHorizontal:10,
-        fontWeight:'400'
     }
 
 

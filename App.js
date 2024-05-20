@@ -1,4 +1,5 @@
-
+import { useState, createContext } from 'react';
+//import { MyContext } from './MyContext';
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
 import Signup from './component/signUp';
 import Signin from './component/signIn';
@@ -7,27 +8,44 @@ import Change from './component/profile/change';
 import Chats from './component/chats';
 import Introduce from './component/introduce';
 import Home from './component/home';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Feedback from './component/feedback';
+import UpLoad from './component/demo';
+import UpLoadFile from './component/upload';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import Message_content from './component/chat';
+
+
+
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+
+  AsyncStorage.setItem('name', "mai van thuyen")
+  AsyncStorage.setItem('gmail', "vanthuyen2004@gmail.com")
+  AsyncStorage.setItem('phone', "0123456789")
+
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Home' screenOptions={{headerShown: false}}>
-        <Stack.Screen name="Signin" component={Signin}/>
+      <Stack.Navigator initialRouteName='Signin' screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Signin" component={Signin} />
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Info" component={Info} />
-        <Stack.Screen name="Change" component={Change}/>
-        <Stack.Screen name="Chats" component={Chats}/>
-        <Stack.Screen name="Home" component={Home}/>
-        <Stack.Screen name="Introduce" component={Introduce}/>
-        <Stack.Screen name="Feedback" component={Feedback}/>
+        <Stack.Screen name="Change" component={Change} />
+        <Stack.Screen name="Chats" component={Chats} />
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Introduce" component={Introduce} />
+        <Stack.Screen name="Feedback" component={Feedback} />
+        <Stack.Screen name="UpLoad" component={UpLoad} />
+        <Stack.Screen name="UpLoadFile" component={UpLoadFile} />
+        <Stack.Screen name="Message_content" component={Message_content} />
 
 
-        
+
+
+
       </Stack.Navigator>
     </NavigationContainer>
     // <View style={styles.container}>
@@ -41,7 +59,7 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    
+
     //alignItems: 'center',
     //justifyContent: 'center',
   },
@@ -52,7 +70,7 @@ const styles = StyleSheet.create({
   //   marginVertical:30
   // },
   // header1:{
-    
+
   //   fontSize:20
 
   // },
@@ -101,7 +119,7 @@ const styles = StyleSheet.create({
   // },
   // textLogin:{
   //   color:'white',
-    
+
   // },
   // signUp:{
   //   flex:1,
