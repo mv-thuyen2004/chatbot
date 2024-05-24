@@ -29,8 +29,8 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Signin' screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Signin" component={Signin} />
+      <Stack.Navigator initialRouteName='Chats' screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Signin" component= {Signin} />
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Info" component={Info} />
         <Stack.Screen name="Change" component={Change} />

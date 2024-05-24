@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios'
 import config from '../../config';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
@@ -72,7 +73,8 @@ const Chats = ({navigation}) => {
         <View style={styles.container}>
             <View style={styles.title}>
                 <View style={styles.title1}>
-                  <Text style={styles.titlChats}>chats</Text> 
+                <Icons name="message-processing-outline" size={40} color="black" />
+                  <Text style={styles.titlChats}>CHATS</Text> 
                 </View>
             </View>
             <View style={styles.chats}>

@@ -7,6 +7,12 @@ import config from '../../config';
 export default function UpLoad({navigation}) {
   const [pdfUri, setPdfUri] = useState(null);
   const [image, setImage] = useState(null);
+  const [user, setUser] = useState('hellooo');
+
+
+ alert(user) /// heloo
+ setUser("hi")
+ alert(user) // hi
   
 
   const pickPdf = async () => {

@@ -6,6 +6,8 @@ import axios from 'axios';
 import config from '../../config';
 import { useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Icon from 'react-native-vector-icons/FontAwesome5';
+
 
 const UpLoadFile = ({navigation}) => {
   const [name , setName] = useState();
@@ -153,9 +155,11 @@ const UpLoadFile = ({navigation}) => {
 
                  <TouchableOpacity
                   onPress={pickFile}
-                  >
+                  > 
+                  
                     <View style={styles.upload} >
-                    <Text style={styles.textUpload}>PICK A PDF FILE</Text>
+                    <Icon name="file-upload" size={40} color="black" />
+                     <Text style={styles.textUpload}>PICK A FILE</Text>
                     </View>
                  </TouchableOpacity>
                </View>
@@ -174,7 +178,7 @@ const UpLoadFile = ({navigation}) => {
           onPress={uploadFile}
           >
             <View style={styles.update} >
-              <Text style={styles.textUpdate}>Update</Text>
+              <Text style={styles.textUpdate}>UpLoad</Text>
             </View>
           </TouchableOpacity>
           

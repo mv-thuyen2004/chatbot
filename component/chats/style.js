@@ -14,7 +14,9 @@ const styles = StyleSheet.create({
     },
     title:{
         flex:2,
-        backgroundColor:'lightgrey',
+        //backgroundColor:'lightgrey',
+        paddingTop:25,
+        paddingLeft:20,
         
         
         
@@ -23,7 +25,8 @@ const styles = StyleSheet.create({
     title1:{
         flex:1,
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
+        flexDirection:'row'
         
         
         
@@ -32,8 +35,9 @@ const styles = StyleSheet.create({
     titlChats:{
         //backgroundColor:'blue',
         flex:5,
-        paddingVertical:15,
+    
         fontSize:30,
+        paddingHorizontal:20
 
 
 
@@ -41,6 +45,7 @@ const styles = StyleSheet.create({
 
     chats:{
         flex:18,
+        
         
         
     },

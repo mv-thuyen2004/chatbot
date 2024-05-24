@@ -84,39 +84,45 @@ const styles = StyleSheet.create({
 
       },
       update:{
-        backgroundColor:'#3617F3',
-        padding:20,
+        backgroundColor:'#3399FF',
+        padding:15,
         marginHorizontal:20,
-        borderRadius:20,
+        borderRadius:15,
     
       },
       textUpdate:{
         color:'white',  
-        paddingHorizontal:25,
-        fontSize:22 
+        paddingHorizontal:20,
+        fontSize:20 
       }, 
       cancel:{
-        backgroundColor:'#1FBEE1',
-        padding:20,
+        backgroundColor:'grey',
+        padding:15,
         marginHorizontal:20,
-        borderRadius:20,
+        borderRadius:15,
     
       },
       textCancel:{
         color:'white',  
-        paddingHorizontal:25, 
-        fontSize:22,
+        paddingHorizontal:20, 
+        fontSize:20,
       }, 
       upload:{
-        backgroundColor:'#1FE155',
-        padding:25,
-        marginHorizontal:28,
-        borderRadius:20,
-        marginTop:10,
+        backgroundColor:'lightgrey',
+        padding:15,
+        marginHorizontal:20,
+        borderRadius:15,
+        marginVertical:15,
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center'
       },
       textUpload:{
+        flex:8,
         color:'white',
-        fontSize:25,
+        //fontSize:25,
+        paddingHorizontal:20
+
 
          
       }, 
