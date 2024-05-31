@@ -120,17 +120,31 @@ const sendContent = async () => {
         <View style={styles.container1}>
             <View style={styles.tilt}>
             <TouchableOpacity
+            style={styles.iconBack}
             onPress={()=>{
               AsyncStorage.removeItem('id_bot')
               navigation.navigate('Chats')
 
             }}>
-            <Icon name="arrow-left" size={30} color="#111111" style={styles.iconBack} />
+            <Icon name="arrow-left" size={30} color="#111111"  />
             </TouchableOpacity>
+            <View style={styles.inf} >
             <Image source={{uri: config.ip+"/" + image}} style={{ width: 40, height: 40, borderRadius:50 }}></Image>
             <Text style={styles.name} >{name}</Text>
+            </View>
+            <TouchableOpacity
+            style={styles.iconChange}
+            onPress={()=>{
+              // AsyncStorage.removeItem('id_bot')
+              navigation.navigate('ChangeBot')
+
+            }}>
+            <Icon name="info-circle" size={30} color="#111111"  />
+            </TouchableOpacity>
+            
 
             </View>
+            
         </View>
         <View style={styles.container2}>
                   <FlatList

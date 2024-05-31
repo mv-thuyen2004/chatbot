@@ -15,6 +15,7 @@ import UpLoad from './component/demo';
 import UpLoadFile from './component/upload';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Message_content from './component/chat';
+import ChangeBot from './component/uploadbot';
 
 
 
@@ -29,7 +30,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Chats' screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName='Signin' screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Signin" component= {Signin} />
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Info" component={Info} />
@@ -41,6 +42,8 @@ export default function App() {
         <Stack.Screen name="UpLoad" component={UpLoad} />
         <Stack.Screen name="UpLoadFile" component={UpLoadFile} />
         <Stack.Screen name="Message_content" component={Message_content} />
+        <Stack.Screen name="ChangeBot" component={ChangeBot} />
+
 
 
 

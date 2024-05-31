@@ -26,18 +26,34 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         alignItems:'center',
         marginVertical:15,
-        marginTop:40
+        marginTop:40,
+        
+    },
+    inf:{
+
+        flexDirection:'row',
+        flex:8
     },
 
     name:{
         margin:5,
         paddingHorizontal:10,
         fontWeight:'bold',
-        fontSize:18
+        fontSize:18,
+        
         
     },
     iconBack:{
+        paddingHorizontal:20,
+        flex:1
+    },
+    iconChange:{
+       
+        flex:1,
         paddingHorizontal:20
+        
+
+
     },
     textInput:{
 

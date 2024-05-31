@@ -1,4 +1,4 @@
 export default{
     //  ip: 'http://192.168.1.10:5055'
-    ip: 'https://6ead-2405-4802-1c96-6600-54e3-54e5-db41-ffd.ngrok-free.app'
+    ip: 'https://2c67-2405-4802-1d83-6bb0-bd97-7966-be75-442d.ngrok-free.app'
 }
